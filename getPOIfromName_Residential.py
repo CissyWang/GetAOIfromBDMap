@@ -38,7 +38,6 @@ def address_web(name, city, lat, lng):
     tag = 'tag=住宅'
     # keywords = 'query=' + name
     # types = 'types=120000'
-    # key = 'key=fbb36c2d303c6de13b51d48b2f900d6e'
 
     # region = 'region=' + city
     loca = 'location=' + str(lat) + ',' + str(lng)
@@ -49,11 +48,10 @@ def address_web(name, city, lat, lng):
     return url
 
 def address_web(name):
-    # MyAK = 'w9HGFgmL64By3EbCf8ukfEIwx4uCqHjk'  # 自行申请的百度AK
-    MyAK = 'HFly4BCwoY2f3kjcuopCR1nbFrF3YMho'  # 自行申请的百度AK
+    MyAK = '****************'  # 自行申请的百度AK
 
     query = 'query=' + name
-    tag = 'tag=综合医院'
+    tag = 'tag=住宅' # check first
     region = 'region=' + '南京市'
     # loca = 'location=' + str(lat) + ',' + str(lng)
     # rawstr = query + '&' + loca + '&' + tag + '&radius=2000&output=json&ak=' + MyAK
@@ -71,10 +69,8 @@ if __name__ == '__main__':
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'}
-    # poi = pd.read_csv(
-    #     r'./residential_new.csv')  # 读取小区名单
     poi = pd.read_csv(
-        'E:\\BigData\\医疗\\二级以上综合医院列表.csv')  # 读取医院名单
+        r'./residential_new.csv')  # 读取小区名单
 
     for i in range(9201, len(poi)):
         # 用于生成url
