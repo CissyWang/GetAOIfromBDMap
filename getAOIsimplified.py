@@ -20,7 +20,7 @@ def bdzb_url(geo):
         tx = str(geo[2 * n]) + ',' + str(geo[2 * n + 1])
         geox = geox + ';' + tx
     bdzb_url = 'http://api.map.baidu.com/geoconv/v1/?coords=' + geox.lstrip(
-        ';') + '&from=6&to=5&ak=w9HGFgmL64By3EbCf8ukfEIwx4uCqHjk'
+        ';') + '&from=6&to=5&ak=[ak]'
     return bdzb_url
 # 合成url
 
