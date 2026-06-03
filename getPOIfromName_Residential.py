@@ -32,8 +32,7 @@ def address_json(test, xx):
 
 # 合成百度API地址
 def address_web(name, city, lat, lng):
-    # MyAK = 'w9HGFgmL64By3EbCf8ukfEIwx4uCqHjk'  # 自行申请的百度AK
-    MyAK = 'HFly4BCwoY2f3kjcuopCR1nbFrF3YMho'  # 自行申请的百度AK
+    MyAK = '*********'  # 自行申请的百度AK
 
     query = 'query=' + name
     tag = 'tag=住宅'
