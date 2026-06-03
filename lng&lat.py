@@ -36,12 +36,13 @@ def combine_LngLat_toNew(data, path_new, export_path):
 
 
 if __name__ == '__main__':
+    dir = " " # replace dir path
     filename = 'hospital _1.csv'
-    path = 'E:\\BigData\\医疗\\' + filename
+    path = dir + filename
     data = pd.read_csv(path)
-    export_path = 'E:\\BigData\\医疗\\' + 'lng&lat_' + filename
+    export_path = dir + 'lng&lat_' + filename
     extractLng_Lat(data, export_path)
 
-    export_path1 = 'E:\\BigData\\医疗\\' + 'trans1_' + filename
-    path_new = 'E:\\BigData\\医疗\\Trans_xy.csv'
+    export_path1 = dir + 'trans1_' + filename
+    path_new = dir+'Trans_xy.csv'
     combine_LngLat_toNew(data, path_new, export_path1)
