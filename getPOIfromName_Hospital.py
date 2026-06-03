@@ -53,7 +53,7 @@ if __name__ == '__main__':
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'}
 
     poi = pd.read_csv(
-        'E:\\BigData\\医疗\\二级以上综合医院列表.csv')  # 读取医院名单
+        '二级以上综合医院列表.csv')  # 读取医院名单
 
     for i in range(len(poi)):
         # 用于生成url
@@ -91,7 +91,7 @@ if __name__ == '__main__':
         if final.size > 0:
             print(i, ',' + name, ',' + final.loc[0, 'uid'])
         time.sleep(random.uniform(0.5, 2))  # 随机休眠
-        final.to_csv('E:\\BigData\\医疗\\hospital.csv', index=True, mode='a', header=False)
+        final.to_csv('hospital.csv', index=True, mode='a', header=False)
     print(final)
 
 
